@@ -124,7 +124,7 @@ async function generatePortfolio() {
 
         const response =
             await fetch(
-                "https://ai-portfolio-generator-lpb8.onrender.com",
+                "https://ai-portfolio-generator-lpb8.onrender.com/generate",
                 {
                     method: "POST",
 
