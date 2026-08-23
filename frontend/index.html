@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Portfolio Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- INPUT SECTION -->
+
+    <section id="generator">
+
+        <div class="generator-container">
+
+            <h1>AI Portfolio Generator ✨</h1>
+
+            <p class="subtitle">
+                Tell us about yourself and let AI create your portfolio.
+            </p>
+
+            <textarea
+                id="userText"
+                placeholder="Tell us about yourself...
+
+Example:
+My name is Aryan.
+I am a B.Tech CSE student.
+I know Java, Python, HTML, CSS and JavaScript.
+I created an AI chatbot and calculator application.
+I want to become a software developer."
+            ></textarea>
+
+            <div class="template-selector" aria-label="Portfolio template">
+                <h3>Choose Portfolio Template</h3>
+
+                <div class="template-options">
+                    <button type="button" class="template-option active" data-template="modern" onclick="selectTemplate('modern', this)">
+                        🚀 Modern
+                    </button>
+                    <button type="button" class="template-option" data-template="minimal" onclick="selectTemplate('minimal', this)">
+                        ✨ Minimal
+                    </button>
+                    <button type="button" class="template-option" data-template="developer" onclick="selectTemplate('developer', this)">
+                        💻 Developer
+                    </button>
+                </div>
+            </div>
+
+            <button
+                type="button"
+                class="generate-btn"
+                onclick="generatePortfolio()"
+            >
+                ✨ Generate Portfolio
+            </button>
+
+            <p id="loading"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PORTFOLIO SECTION -->
+
+    <section id="portfolio" class="hidden">
+
+        <!-- HERO -->
+
+        <div class="hero">
+
+            <h1 id="portfolioName">
+                Aryan Jadoun
+            </h1>
+
+            <h2 id="portfolioHeadline">
+                Software Developer
+            </h2>
+
+            <div class="contact-buttons">
+
+                <a
+                    id="github"
+                    href="#"
+                    target="_blank"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    id="linkedin"
+                    href="#"
+                    target="_blank"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ABOUT -->
+
+        <section class="portfolio-section">
+
+            <h2>About Me</h2>
+
+            <p id="about"></p>
+
+        </section>
+
+
+        <!-- SKILLS -->
+
+        <section class="portfolio-section">
+
+            <h2>Skills</h2>
+
+            <div
+                id="skills"
+                class="skills-container"
+            ></div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+
+        <section class="portfolio-section">
+
+            <h2>Projects</h2>
+
+            <div
+                id="projects"
+                class="projects-container"
+            ></div>
+
+        </section>
+
+
+        <!-- EDUCATION -->
+
+        <section class="portfolio-section">
+
+            <h2>Education</h2>
+
+            <div
+                id="education"
+            ></div>
+
+        </section>
+
+
+        <!-- EXPERIENCE -->
+
+        <section
+            id="experience-section"
+            class="portfolio-section"
+        >
+
+            <h2>Experience</h2>
+
+            <div
+                id="experience"
+            ></div>
+
+        </section>
+
+
+        <!-- ACHIEVEMENTS -->
+
+        <section
+            id="achievements-section"
+            class="portfolio-section"
+        >
+
+            <h2>Achievements</h2>
+
+            <div
+                id="achievements"
+            ></div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+                Generated with AI Portfolio Generator ✨
+            </p>
+
+        </footer>
+
+    </section>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
